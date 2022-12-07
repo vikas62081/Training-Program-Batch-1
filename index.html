@@ -1,55 +1,73 @@
 <html>
-
-<head>
+  <head>
     <title>Welcome</title>
     <style>
-        p{
-            color:green
-        }
-        .list{
-            background-color:aqua;
-        }
-        #ordered-list{
-            color: blue;
-        }
-        h6{
-            background-color:blueviolet;
-            /* padding: 10px; all four value */
-            /* padding-left: 10px; */
-            /* padding:5px 10px; top-buttom & left-right */
-            padding: 1px 2px 3px 4px; /*top right bottom left*/
-            border:2px solid red;
-            /* border-width: ; */
-            /* border-style: ; */
-            /* border-color: ; */
-        }
-        /* add your css */
+      body {
+        margin: 0;
+      }
+      .content {
+        background-color: #c2d8e4;
+        /* border-bottom:1px solid black; */
+        padding-left: 10px;
+        margin: 5px;
+        border-radius: 2px;
+        font-size: 20px;
+      }
+      button {
+        background-color: burlywood;
+        outline: 0;
+        border: 0;
+        border-radius: 2px;
+        border: 1px solid blue;
+      }
+      .img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      iframe {
+        width: 90%;
+      }
+      p{
+        text-indent: 50px;
+        /* letter-spacing: 3px;
+        word-spacing: 5px;
+        line-height: 15px; */
+        /* text-decoration:line-through; */
+
+        font-size: 90%;
+        font-weight: normal;
+        font-family:'Courier New', Courier, monospace, sans-serif;
+        color:#6559a5;
+        font-style: italic;
+      }
+      a{
+        text-decoration: none;
+      }
+      a:hover{
+        color:green;
+        text-decoration: underline;
+      }
     </style>
 
     <script src="">
-    // your js file goes here
+      // your js file goes here
     </script>
+  </head>
 
-</head>
+  <body>
+    <div class="content">
+      <!-- <button>Click me</button> -->
 
-<body>
-    <h6>Hello</h6>
-    <p>Web Development</p>
-    <p class="list">Web Development 1</p>
+      <!-- <img src="https://picsum.photos/id/237/200/300" alt="dog image" class="img"/>
+-->
+    <!-- <a href="https://picsum.photos/id/237/200/300" target="_blank">Dog image</a> -->
 
-    <ol id="ordered-list" class="list">
-        <li>Hello</li>
-        <li>Greetings</li>
-        <li>Hello-1</li>
-        <li>Greetings</li>
-    </ol>
-
-    <ul  class="list">
-        <li>Hello</li>
-        <li>Greetings</li>
-        <li>Hello-1</li>
-        <li>Greetings</li>
-    </ul>
-</body>
-
+<!-- <iframe src="file:///Users/vikas/Desktop/html/index.html" />  -->
+      <p>
+        To request multiple images of the same size in your browser, add the
+        random query param to prevent the images from being cached.
+      </p>
+    </div>
+  </body>
 </html>
