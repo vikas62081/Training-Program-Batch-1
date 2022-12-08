@@ -4,49 +4,71 @@
     <style>
       body {
         margin: 0;
-      }
-      .content {
         background-color: #c2d8e4;
+      }
+
+      .header {
+        background-color: #ffffff;
         /* border-bottom:1px solid black; */
-        padding-left: 10px;
-        margin: 5px;
-        border-radius: 2px;
+        padding: 30px;
         font-size: 20px;
       }
-      button {
-        background-color: burlywood;
-        outline: 0;
-        border: 0;
-        border-radius: 2px;
-        border: 1px solid blue;
-      }
-      .img {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-      }
-      iframe {
-        width: 90%;
-      }
-      p{
-        text-indent: 50px;
-        /* letter-spacing: 3px;
-        word-spacing: 5px;
-        line-height: 15px; */
-        /* text-decoration:line-through; */
 
-        font-size: 90%;
-        font-weight: normal;
-        font-family:'Courier New', Courier, monospace, sans-serif;
-        color:#6559a5;
-        font-style: italic;
+      .main-content {
+        /* background-color: darkgray; */
+        height: 80%;
+        padding: 10px;
       }
-      a{
-        text-decoration: none;
+
+      .inner-div {
+        background-color: azure;
       }
-      a:hover{
-        color:green;
-        text-decoration: underline;
+
+      h1 {
+        margin: 0;
+
+        text-align: center;
+      }
+
+      .inline-div {
+        display: inline;
+      }
+
+      .actions {
+        display: inline;
+        float: right;
+      }
+
+      table{
+        width: 50%;
+        border-collapse: collapse;
+        font-family: system-ui;
+        
+      }
+      th,td{
+        /* background-color: #ffffff; */
+        padding: 22px 20px;
+        border: 1px grey solid;
+      }
+      thead{
+        background-color: #00997a;
+        color: #ffffff;
+        border-radius: 10px 10px 0 0;
+      }
+     
+      tbody tr:nth-child(even){
+        background-color: #f3f3f3;
+      }
+      tbody tr:nth-child(odd){
+        background-color: #ffffff;
+      }
+      tbody tr:hover{
+        background-color: #f4f4f4;
+        color: #00997a;
+        /* font-weight: 600; */
+      }
+      th{
+        text-align: left;
       }
     </style>
 
@@ -56,18 +78,70 @@
   </head>
 
   <body>
-    <div class="content">
-      <!-- <button>Click me</button> -->
-
-      <!-- <img src="https://picsum.photos/id/237/200/300" alt="dog image" class="img"/>
--->
-    <!-- <a href="https://picsum.photos/id/237/200/300" target="_blank">Dog image</a> -->
-
-<!-- <iframe src="file:///Users/vikas/Desktop/html/index.html" />  -->
-      <p>
-        To request multiple images of the same size in your browser, add the
-        random query param to prevent the images from being cached.
-      </p>
+    <div>
+      <div class="header">
+        <div class="inline-div">Header</div>
+        <div class="inline-div">
+          <div class="actions">
+            <div>
+              <button>Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <h1>Main content</h1>
+        <div>
+          <!-- table goes here -->
+          <table>
+            <caption>Student Table</caption>
+            <thead>
+              <!-- table headers goes here  -->
+              <tr>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- table data  -->
+              <!-- <tr>
+                <td colspan="3">Abc</td>
+                </tr>
+              <tr >
+                <td rowspan="2">Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr> -->
+              <tr>
+               <td>Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr> <tr>
+                <td>Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer">footer</div>
     </div>
   </body>
 </html>
