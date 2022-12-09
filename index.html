@@ -1,111 +1,109 @@
 <html>
-  <head>
-    <title>Welcome</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: #c2d8e4;
-      }
 
-      .header {
-        background-color: #ffffff;
-        /* border-bottom:1px solid black; */
-        padding: 30px;
-        font-size: 20px;
-      }
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="./css/table.css" type="text/css" />
+  <link rel="stylesheet" href="./css/form.css" type="text/css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #c2d8e4;
+      font-family: sans-serif;
+    }
 
-      .main-content {
-        /* background-color: darkgray; */
-        height: 80%;
-        padding: 10px;
-      }
+    .header {
+      background-color: #ffffff;
+      /* border-bottom:1px solid black; */
+      padding: 30px;
+      font-size: 20px;
+    }
 
-      .inner-div {
-        background-color: azure;
-      }
+    .main-content {
+      /* background-color: darkgray; */
+      height: 80%;
+      padding: 10px;
+    }
 
-      h1 {
-        margin: 0;
+    .inner-div {
+      background-color: azure;
+    }
 
-        text-align: center;
-      }
+    h1 {
+      margin: 0;
 
-      .inline-div {
-        display: inline;
-      }
+      text-align: center;
+    }
 
-      .actions {
-        display: inline;
-        float: right;
-      }
+    .inline-div {
+      display: inline;
+    }
 
-      table{
-        width: 50%;
-        border-collapse: collapse;
-        font-family: system-ui;
-        
-      }
-      th,td{
-        /* background-color: #ffffff; */
-        padding: 22px 20px;
-        border: 1px grey solid;
-      }
-      thead{
-        background-color: #00997a;
-        color: #ffffff;
-        border-radius: 10px 10px 0 0;
-      }
-     
-      tbody tr:nth-child(even){
-        background-color: #f3f3f3;
-      }
-      tbody tr:nth-child(odd){
-        background-color: #ffffff;
-      }
-      tbody tr:hover{
-        background-color: #f4f4f4;
-        color: #00997a;
-        /* font-weight: 600; */
-      }
-      th{
-        text-align: left;
-      }
-    </style>
+    .actions {
+      display: inline;
+      float: right;
+    }
+  </style>
 
-    <script src="">
+  <script src="">
       // your js file goes here
-    </script>
-  </head>
+  </script>
+</head>
 
-  <body>
-    <div>
-      <div class="header">
-        <div class="inline-div">Header</div>
-        <div class="inline-div">
-          <div class="actions">
-            <div>
-              <button>Profile</button>
-            </div>
+<body>
+  <div>
+    <div class="header">
+      <div class="inline-div">Header</div>
+      <div class="inline-div">
+        <div class="actions">
+          <div>
+            <button>Profile</button>
           </div>
         </div>
       </div>
-      <div class="main-content">
-        <h1>Main content</h1>
-        <div>
-          <!-- table goes here -->
-          <table>
-            <caption>Student Table</caption>
-            <thead>
-              <!-- table headers goes here  -->
-              <tr>
-                <th>First Name</th>
-                <th>Second Name</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- table data  -->
-              <!-- <tr>
+    </div>
+    <div class="main-content">
+      <h1>Form</h1>
+      <form>
+        <div class="form-input">
+        <label for="username">Username : </label>
+        <input id="username" name="color" type="text" placeholder="Enter username">
+        </input>
+      </div>
+      <div class="form-input">
+        <label for="password">Password : </label>
+        <input id="password" type="password" placeholder="Enter password"/>
+      </div>
+      <div class="form-input">
+        <!-- <input type="button" value="login"/> -->
+        <button type="submit">Login</button>
+        </div>
+
+        <!-- <input id="username" name="color" type="radio" placeholder="Enter username">Orange
+        </input>
+        <input id="username" name="color" type="radio" placeholder="Enter username">Blue
+        </input> 
+      
+
+        <input type="submit"/>
+        <input type="reset"/> -->
+      </form>
+      <div>
+        <!-- table goes here -->
+        <table>
+          <caption>
+            Student Table
+          </caption>
+          <thead>
+            <!-- table headers goes here  -->
+            <tr>
+              <th>First Name</th>
+              <th>Second Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- table data  -->
+            <!-- <tr>
                 <td colspan="3">Abc</td>
                 </tr>
               <tr >
@@ -113,35 +111,37 @@
                 <td>Def</td>
                 <td>abc@gmail.com</td>
               </tr> -->
-              <tr>
-               <td>Abc</td>
-                <td>Def</td>
-                <td>abc@gmail.com</td>
-              </tr>
-              <tr>
-                <td>Abc</td>
-                <td>Def</td>
-                <td>abc@gmail.com</td>
-              </tr>
-              <tr>
-                <td>Abc</td>
-                <td>Def</td>
-                <td>abc@gmail.com</td>
-              </tr> <tr>
-                <td>Abc</td>
-                <td>Def</td>
-                <td>abc@gmail.com</td>
-              </tr>
-              <tr>
-                <td>Abc</td>
-                <td>Def</td>
-                <td>abc@gmail.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="footer">footer</div>
     </div>
-  </body>
+    <div class="footer">footer</div>
+  </div>
+</body>
+
 </html>
