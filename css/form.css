@@ -1,12 +1,13 @@
 
 input{
     padding:10px 8px;
-    width: 250px;
+    width: 200px;
     border: none;
     /* border-radius: 5px; */
     outline: none;
-    border-bottom: 1px gray solid;
+    /* border-bottom: 1px gray solid; */
     background-color: transparent;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
   
 }
  .form-input{
@@ -16,5 +17,22 @@ input{
 
 }
 .form-input label{
-    width: 200px;
+    display: inline-block;
+    width: 150px;
 }
+form{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    width: 400px;
+    border-radius: 5px;
+}
+form button{
+    padding: 10px;
+    width: 100%;
+    background-color: cadetblue;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+form button:hover{
+    background-color: rgb(46, 105, 107);}

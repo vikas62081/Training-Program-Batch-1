@@ -1,0 +1,162 @@
+<html>
+
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="./css/table.css" type="text/css" />
+  <link rel="stylesheet" href="./css/form.css" type="text/css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #c2d8e4;
+      font-family: sans-serif;
+    }
+
+    .header {
+      background-color: #ffffff;
+      /* border-bottom:1px solid black; */
+      padding: 30px;
+      font-size: 20px;
+    }
+
+    .main-content {
+      /* background-color: darkgray; */
+      height: 80%;
+      padding: 10px;
+    }
+
+    .inner-div {
+      background-color: azure;
+    }
+
+    h1 {
+      margin: 0;
+
+      text-align: center;
+    }
+
+    .inline-div {
+      display: inline;
+    }
+
+    .actions {
+      display: inline;
+      float: right;
+    }
+  </style>
+
+  <script >
+      // your js file goes here
+      function onButtonClicked(){
+        // alert('button clicked')
+        const username=document.getElementById("username").value
+        const password=document.getElementById("password").value
+        const gender=document.getElementById("gender").value
+        console.log(username,password,gender)
+      }
+  </script>
+</head>
+
+<body>
+  <div>
+    <div class="header">
+      <div class="inline-div">Header</div>
+      <div class="inline-div">
+        <div class="actions">
+          <div>
+            <button>Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <h1>Form</h1>
+      <!-- <form> -->
+        <div>
+          <h2>Sign In</h2>
+          <!-- <hr/> -->
+        </div>
+        <div class="form-input">
+        <label for="username">Username : </label>
+        <input id="username" type="text" placeholder="Enter username">
+        </input>
+      </div>
+      <div class="form-input">
+        <label for="password">Password : </label>
+        <input id="password" type="password" placeholder="Enter password"/>
+      </div> 
+      <div class="form-input">
+        <input id="gender" name="gender" type="radio" value="Male" > Male</input>
+        <input id="gender" name="gender" type="radio" value="Female"> Female</input>
+      </div>
+      <div class="form-input">
+        <!-- <input type="button" value="login"/> -->
+        <button type="submit" onclick="onButtonClicked()">Sign In</button>
+        </div>
+
+        <!-- <input id="username" name="color" type="radio" placeholder="Enter username">Orange
+        </input>
+        <input id="username" name="color" type="radio" placeholder="Enter username">Blue
+        </input> 
+      
+
+        <input type="submit"/>
+        <input type="reset"/> -->
+      <!-- </form> -->
+      <div>
+        <!-- table goes here -->
+        <table>
+          <caption>
+            Student Table
+          </caption>
+          <thead>
+            <!-- table headers goes here  -->
+            <tr>
+              <th>First Name</th>
+              <th>Second Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- table data  -->
+            <!-- <tr>
+                <td colspan="3">Abc</td>
+                </tr>
+              <tr >
+                <td rowspan="2">Abc</td>
+                <td>Def</td>
+                <td>abc@gmail.com</td>
+              </tr> -->
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Abc</td>
+              <td>Def</td>
+              <td>abc@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+
+</html>
