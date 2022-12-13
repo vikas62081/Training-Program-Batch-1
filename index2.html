@@ -46,12 +46,22 @@
 
   <script >
       // your js file goes here
-      function onButtonClicked(){
+      function onSubmitForm(){
         // alert('button clicked')
         const username=document.getElementById("username").value
         const password=document.getElementById("password").value
-        const gender=document.getElementById("gender").value
-        console.log(username,password,gender)
+        let gender=''
+        const rememberme=document.getElementById('rememberme').checked
+        const genders=document.getElementsByName("gender")
+
+      for(let i=0;i<genders.length;i++){
+        if(genders[i].checked){
+          gender=genders[i].value
+        }
+      }
+
+        console.log(username,password,gender,rememberme)
+       
       }
   </script>
 </head>
@@ -70,27 +80,33 @@
     </div>
     <div class="main-content">
       <h1>Form</h1>
-      <!-- <form> -->
+      <form onsubmit="onSubmitForm(); return false">
         <div>
           <h2>Sign In</h2>
           <!-- <hr/> -->
         </div>
         <div class="form-input">
         <label for="username">Username : </label>
-        <input id="username" type="text" placeholder="Enter username">
+        <input id="username" type="text" placeholder="Enter username" required>
         </input>
       </div>
       <div class="form-input">
         <label for="password">Password : </label>
-        <input id="password" type="password" placeholder="Enter password"/>
+        <input id="password" type="password" placeholder="Enter password" required/>
       </div> 
       <div class="form-input">
-        <input id="gender" name="gender" type="radio" value="Male" > Male</input>
-        <input id="gender" name="gender" type="radio" value="Female"> Female</input>
+        <label for="password">Gender : </label>
+        <input id="gender" name="gender" type="radio" value="Male" required> Male</input>
+        <input name="gender" type="radio" value="Female"> Female</input>
+        <input name="gender" type="radio" value="Other"> Other</input>
+      </div>
+      <div class="form-input">
+        <input id="rememberme" name="rememberme" type="checkbox" > Remember me</input>
+     
       </div>
       <div class="form-input">
         <!-- <input type="button" value="login"/> -->
-        <button type="submit" onclick="onButtonClicked()">Sign In</button>
+        <button type="submit" >Sign In</button>
         </div>
 
         <!-- <input id="username" name="color" type="radio" placeholder="Enter username">Orange
@@ -101,7 +117,7 @@
 
         <input type="submit"/>
         <input type="reset"/> -->
-      <!-- </form> -->
+      </form>
       <div>
         <!-- table goes here -->
         <table>
