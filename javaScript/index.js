@@ -143,20 +143,98 @@ const secondNumber = 90;
 
 //     }
 
-if (firstNumber == secondNumber) {
-  console.log("First Number is equal to second Number");
-} else if (firstNumber > secondNumber) {
-  console.log("First Number is greater than second Number");
-} else {
-  console.log("Second Number is greater than first Number");
-}
+// if (firstNumber == secondNumber) {
+//   console.log("First Number is equal to second Number");
+// } else if (firstNumber > secondNumber) {
+//   console.log("First Number is greater than second Number");
+// } else {
+//   console.log("Second Number is greater than first Number");
+// }
 
-if (firstNumber == secondNumber) {
-  console.log("First Number is equal to second Number");
-} else {
-  if (firstNumber > secondNumber) {
-    console.log("First Number is greater than second Number");
-  } else {
-    console.log("Second Number is greater than first Number");
-  }
-}
+// if (firstNumber == secondNumber) {
+//   console.log("First Number is equal to second Number");
+// } else {
+//   if (firstNumber > secondNumber) {
+//     console.log("First Number is greater than second Number");
+//   } else {
+//     console.log("Second Number is greater than first Number");
+//   }
+// }
+
+// Day 9
+// Looping
+
+// Increment , decrement Operators
+// let i = 4;
+// // --i; // i=i+1
+// // console.log(i++); // post increment 4
+// console.log(++i); // pre increment
+// console.log(i);
+
+//For loop
+
+// syntax: for (initialization; condition; ++| --){
+//   statement 1
+// 2
+// }
+
+// Example
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i * 3); //table of 3
+// }
+
+// problem 1 : find odd even number
+// const number = 2;
+// if (number % 2 === 0) {
+//   console.log(number, "is even number");
+// } else {
+//   console.log(number, "is odd number");
+// }
+
+// problem 2: print all even number b/w 1 to N
+// solution 1:
+// const N = 100;
+// for (let i = 1; i <= N; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i, "is even number");
+//   }
+//   /// 100 items
+// }
+//  solution 2:
+// const N = 10;
+// for (let i = 2; i <= N; i = i + 2) {
+//   console.log(i, "is even number");
+//   /// N/2 iterations
+// }
+
+// problem 3: print all number which are divisible by 8 b/w 1 to N
+// const N = 100;
+// const number = 9;
+// for (let i = 1; i <= N; i++) {
+//   if (i % number === 0) {
+//     console.log(i, "is divisible by", number);
+//   }
+// }
+
+// problem 4: print all number which are divisible by 8 and 5 b/w 1 to N
+// const N = 100;
+// const number1 = 8;
+// const number2 = 5;
+
+// for (let i = 1; i <= N; i++) {
+//   if (i % number1 === 0 && i % number2 === 0) {
+//     console.log(i, "is divisible by", number1, number2);
+//   }
+// }
+// problem 5: print count of all number which are divisible by 8 and 5 b/w 1 to N
+// const N = 100;
+// const number1 = 8;
+// const number2 = 5;
+// let count = 0;
+// for (let i = 1; i <= N; i++) {
+//   if (i % number1 === 0 && i % number2 === 0) {
+//     count++;
+//   }
+// }
+// console.log("Total count is", count);
