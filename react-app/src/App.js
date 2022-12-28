@@ -1,29 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import Counter, { Grettings } from "./Counter";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
-  const handleReset = () => {
-    setCount(0);
-  };
-
   return (
     <div className="App">
-      <h1>Count : {count}</h1>
-
-      <button onClick={handleIncrement}>Incement</button>
-      <button onClick={handleDecrement} disabled={false}>
-        Decrement
-      </button>
-      <button onClick={handleReset}>Reset</button>
+      <Counter incrementBy={5} decrementBy={3} resetValue={0} />
+      <Counter incrementBy={10} initialCount={100} />
+      <Counter incrementBy={10} initialCount={100} />
+      <Grettings />
+      <Grettings name="Vikas" />
     </div>
   );
 };
