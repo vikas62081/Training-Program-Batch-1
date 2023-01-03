@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap:10px;
 }
 
 .App-logo {
@@ -78,4 +81,13 @@ tbody tr:hover{
 }
 th{
   text-align: left;
+}
+.passenger{
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+}
+span{
+  font-size: 14px;
+  font-weight: 500;
 }
