@@ -1,28 +1,24 @@
 import React, { useState } from "react";
-
+const initialFormData = {
+  name: "",
+  email: "",
+  dob: "",
+};
 const StudentForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [dob, setDob] = useState("");
+  const [formData, setFormData] = useState(initialFormData);
+  const onChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log(e.target.name, e.target.value);
+  };
 
-  const changeName = (e) => {
-    setName(e.target.value);
-  };
-  const changeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const changeDob = (e) => {
-    setDob(e.target.value);
-  };
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    const { name, email, dob } = formData;
     console.log(name, email, dob);
     resetForm();
   };
   const resetForm = () => {
-    setName("");
-    setEmail("");
-    setDob("");
+    setFormData(initialFormData);
   };
 
   return (
@@ -33,8 +29,8 @@ const StudentForm = () => {
           Name :
           <input
             name="name"
-            value={name}
-            onChange={changeName}
+            value={formData.name}
+            onChange={onChange}
             placeholder="Enter name"
             type="text"
             required
@@ -47,8 +43,8 @@ const StudentForm = () => {
             placeholder="Enter email"
             type="email"
             required
-            value={email}
-            onChange={changeEmail}
+            value={formData.email}
+            onChange={onChange}
           />
         </div>
         <div>
@@ -57,8 +53,8 @@ const StudentForm = () => {
             name="dob"
             type="date"
             required
-            value={dob}
-            onChange={changeDob}
+            value={formData.dob}
+            onChange={onChange}
           />
         </div>
         <div>
