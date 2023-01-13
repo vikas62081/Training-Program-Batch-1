@@ -1,5 +1,6 @@
 import {
   DeleteOutlined,
+  EditOutlined,
   PlusOutlined,
   SlackSquareOutlined,
   UserOutlined,
@@ -18,7 +19,7 @@ import {
   Tooltip,
   Typography,
 } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 const initialTodos = [
   {
@@ -45,6 +46,8 @@ const initialTodos = [
 const Todo = () => {
   const [todos, setTodos] = useState(initialTodos);
   const [newTodoTitle, setNewTodoTitle] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingTodoId, seteditingTodoId] = useState("");
   const handleChange = (e) => {
     setNewTodoTitle(e.target.value);
   };
@@ -55,10 +58,25 @@ const Todo = () => {
     setNewTodoTitle("");
     message.success("New todo added successfully");
   };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    addNewTodo();
+    debugger;
+    if (isEditing) {
+      const updatedTodos = todos.map((t) => {
+        if (t.id === editingTodoId) {
+          return { ...t, title: newTodoTitle };
+        }
+        return t;
+      });
+      setTodos(updatedTodos);
+      setIsEditing(false);
+      seteditingTodoId("");
+      setNewTodoTitle("");
+      message.success("Todo updated successfully");
+    } else addNewTodo();
   };
+
   const handleCheckboxChange = (id) => {
     const updatedTodos = todos.map((t) => {
       if (t.id === id) {
@@ -68,11 +86,23 @@ const Todo = () => {
     });
     setTodos(updatedTodos);
   };
+
   const handleDelete = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
     message.success("Todo get deleted successfully");
   };
+  const handleEdit = (todo) => {
+    setIsEditing(true);
+    seteditingTodoId(todo.id);
+    setNewTodoTitle(todo.title);
+  };
+
+  useEffect(() => {
+    if (isEditing) {
+      document.title = `Id ${editingTodoId} being edit`;
+    }
+  }, [isEditing]);
   return (
     <>
       {/* {todos.map((todo) => (
@@ -94,7 +124,7 @@ const Todo = () => {
                 required
               />
               <Button type="primary" size="large">
-                <PlusOutlined />
+                {isEditing ? <EditOutlined /> : <PlusOutlined />}
               </Button>
             </Input.Group>
           </form>
@@ -141,6 +171,9 @@ const Todo = () => {
                         <DeleteOutlined />
                       </Tooltip>
                     </Popconfirm>
+                    <Tooltip title="Edit">
+                      <EditOutlined onClick={() => handleEdit(todo)} />
+                    </Tooltip>
                   </div>
                 </List.Item>
                 {/* <List.Item>
