@@ -5,6 +5,7 @@ import Counter, { Grettings } from "./components/Counter";
 import StudentForm from "./components/Form";
 import Student from "./components/Student";
 import Todo from "./components/Todo";
+import Users from "./components/users";
 export const StudentContext = createContext();
 
 const App = () => {
@@ -18,8 +19,10 @@ const App = () => {
   return (
     <div className="App">
       <StudentContext.Provider value={posts}>
-        <Student />
+        {/* <Student /> */}
         {/* <Todo /> */}
+        {/* <Counter /> */}
+        <Users />
       </StudentContext.Provider>
     </div>
   );
